@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Boyfriend's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+        }
+        header {
+            background-color: #ff69b4;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #d81b60;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #ff69b4;
+        }
+        ul, ol {
+            color: #333;
+        }
+        footer {
+            background-color: #ff69b4;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        #song-player {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 105, 180, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+        #song-player audio {
+            width: 80%;
+            max-width: 500px;
+        }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d81b60;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I love you Dev Sharma</h1>
+    </header>
+    <main>
+        <img src="WhatsApp Image 2024-09-26 at 2.43.03 PM.jpeg" alt="My Boyfriend">
+        <div id="timer">Loading timer...</div>
+        <p>Here's a little bit about my amazing boyfriend:</p>
+        <ul>
+            <li>He's kind and caring</li>
+            <li>He has a great sense of humor</li>
+            <li>He's passionate about Mortal Kombat</li>
+    
+        </ul>
+        <h2>Our Favorite Memories</h2>
+        <p>Some of our best moments together include:</p>
+        <ol>
+            <li>Our first date at Vrindavan</li>
+        </ol>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Boyfriend's Website. All rights reserved.</p>
+    </footer>
+    <div id="song-player">
+        <h3>Our Song</h3>
+        <audio controls>
+            <source src="Hale Dil Tujhko Sunata Murder 2 Full Video Song _ Emraan Hashmi_uSibwB2TQC4 (1).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function updateTimer() {
+            const startTime = 13140000; // Starting time in seconds
+            const now = Math.floor(Date.now() / 1000); // Current time in seconds
+            const elapsedTime = now - startTime;
+            
+            const days = Math.floor(elapsedTime / (24 * 60 * 60));
+            const hours = Math.floor((elapsedTime % (24 * 60 * 60)) / (60 * 60));
+            const minutes = Math.floor((elapsedTime % (60 * 60)) / 60);
+            const seconds = elapsedTime % 60;
+
+            const timerElement = document.getElementById('timer');
+            timerElement.textContent = `Time Together: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+
+        // Update timer immediately and then every second
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
+
+
+
+
+
